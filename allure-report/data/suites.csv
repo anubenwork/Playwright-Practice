@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","10803","verify dropdown selection","chrome","Thu Nov 20 15:32:12 CET 2025","passed","Thu Nov 20 15:32:23 CET 2025","","checkbox_radiobutton.spec.js","",""
+"","3768","visual","chrome","Thu Nov 20 15:32:29 CET 2025","passed","Thu Nov 20 15:32:33 CET 2025","","visualtesting.spec.js","",""
+"","14993","Invaliduser","chrome","Thu Nov 20 15:32:24 CET 2025","passed","Thu Nov 20 15:32:39 CET 2025","","UIBasics.spec.js","",""
+"","499","POST request - create user","chrome","Thu Nov 20 15:32:12 CET 2025","passed","Thu Nov 20 15:32:13 CET 2025","","APIIntegration.spec.js","",""
+"","1048","cartadd","chrome","Thu Nov 20 15:32:21 CET 2025","failed","Thu Nov 20 15:32:22 CET 2025","","practice1.spec.js","",""
+"","3924","Invaliduser","chrome","Thu Nov 20 15:32:25 CET 2025","passed","Thu Nov 20 15:32:29 CET 2025","","previouscode.spec.js","",""
