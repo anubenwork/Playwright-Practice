@@ -25,7 +25,7 @@ test.only('verify dropdown selection', async({page}) =>
 const passwordfield=await page.locator('#password').type("secret_sauce") // locate element using id and type the text
 const loginbutton=await page.locator('#login-button').click()
 const dropdown = page.locator("//select[@class = 'product_sort_container']")
-//await dropdown.selectOption({index:2}) // select by idex
+//await dropdown.selectOption({index:2}) // select by index
 //await dropdown.selectOption('za') // select by value
 await dropdown.selectOption({label:'Name (Z to A)'}) // select using visible text
 await page.pause()

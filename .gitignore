@@ -6,3 +6,8 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+# Cucumber / test report artifacts
+*-attachment.*
+*-result.json
+cucumber-report.html
+reports/

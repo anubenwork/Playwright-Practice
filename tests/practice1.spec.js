@@ -3,6 +3,7 @@ const Dashboard = require('../page-objects/Dashboard')
 const Summary = require('../page-objects/Summary')
 const Login = require('../page-objects/Login')
 const dataset = JSON.parse(JSON.stringify(require('../utils/testdata.json'))) //syntax to pass or use json file
+const {customtest} = require('../utils/test_base')
 test.only('cartadd',async({browser}) =>
 {
 const context = await browser.newContext();
@@ -59,4 +60,31 @@ await expect(page.locator('//h2[@class="complete-header"]')).toHaveText('Thank y
 
 ////h2[@class="complete-header"]
 
+});
+customtest.only('Parameterized data driven',async({page,testDataForOrder})=>{
+    //const username=data[0].username
+    //const password=data[0].password
+    await page.goto('https://demoblaze.com/')
+    const loginPage=new LoginPage(page)
+    await loginPage.clickLogin()
+    await loginPage.enterUsername(testDataForOrder.username)
+    await loginPage.enterPassword(testDataForOrder.password)
+    await loginPage.login()
+
+    const addToCartPage = new AddtoCartPage(page) 
+    addToCartPage.selectMonitor()
+    addToCartPage.select_product()
+    await page.pause()
+    await addToCartPage.addToCartBtn()
+    page.on('dialog', dialog => dialog.accept());
+    await addToCartPage.selectCart()
+    await page.pause()
+    await addToCartPage.placeOrderClick()
+    await addToCartPage.addcustomername()
+    await addToCartPage.addcountry()
+    await addToCartPage.addcity()
+    await addToCartPage.addCreditCardData()
+    await addToCartPage.addMonth()
+    await addToCartPage.addYear()
+    await addToCartPage.purchaseProduct()
 });
